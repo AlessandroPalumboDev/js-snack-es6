@@ -11,4 +11,4 @@ Infine  creiamo un nuovo array i cui elementi contengono solo nomi e falli subit
 
 - creo una variabile = array.map per modificare le proprietà a 0 usando la funzione che calcola un numero casuale, ma ritorna solo .nome e .falliSubiti
 
-- Stampo
+- Stampo il nuovo array

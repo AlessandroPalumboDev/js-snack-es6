@@ -2,7 +2,7 @@
 
 const squadre = [
     {
-        nome: 'Juentus',
+        nome: 'Juventus',
         puntiFatti: 0,
         falliSubiti: 0
     },
@@ -53,19 +53,23 @@ const squadre = [
     }
 ];
 
-
-function random(min, max){
+// funzione numeri casuali
+function random(min, max) {
     const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
 
-const result = squadre.map((squadra) =>{
+// modifico punti, falli e creo nuovo array
+const result = squadre.map((squadra) => {
     squadra.puntiFatti = random(1, 99);
     squadra.falliSubiti = random(1, 99);
-    // console.log(squadra.nome, squadra.falliSubiti)
-    return squadra.nome, squadra.falliSubiti;
-    
+    return {
+        nome: squadra.nome,
+        falliSubiti: squadra.falliSubiti
+    };
 });
 
+// stampo
+console.table(squadre);
 console.table(result);

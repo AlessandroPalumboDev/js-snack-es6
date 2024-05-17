@@ -53,6 +53,8 @@ const squadre = [
     }
 ];
 
+console.table(squadre);
+
 // funzione numeri casuali
 function random(min, max) {
     const minCeiled = Math.ceil(min);
